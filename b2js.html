@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài tập</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>bài tập viết chương trình nhận đầu vào và tính điểm trung bình</h1><br>
+	<input type="number" name="ly" id="1">
+	<input type="number" name="hoa" id="2">
+	<input type="number" name="sinh" id="3">
+	<input type="submit" name="submit" onclick="dtb()">
+<script type="text/javascript">
+	function dtb()        {
+            var ly = parseInt(document.getElementById("1").value);
+            var hoa = parseInt(document.getElementById("2").value);
+        	var sinh = parseInt(document.getElementById("3").value);
+        	var dtb=(ly+hoa+sinh)/3;
+        	document.write(dtb);
+        }
+</script>
+
+</body>
+</html>
