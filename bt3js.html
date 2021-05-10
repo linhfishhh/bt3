@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài tập javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>to Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" id="input"></td>
+            <td><select id="1">
+                <option>Vietnam</option>
+                <option>America</option>
+            </select></td>
+            <td><select id="2">
+                <option>VND</option>
+                <option>USD</option>
+            </select></td>
+            <td><button type="button" onclick="convert()">submit</button> </td>
+        </tr>
+    </table>
+</form>
+<div id="show"></div>
+</body>
+</html>
+<script type="text/javascript">
+	function convert(){
+	var input= parseInt(document.getElementById("input").value);
+	var tien1=document.getElementById("1").value;
+	var tien2=document.getElementById("2").value;debugger
+	if((tien1=="Vietnam") && (tien2=="VND") || (tien1=="America") && (tien2=="USD")){
+		document.getElementById("show").innerHTML="số tiền là: "+input;
+	}
+	if((tien1=="Vietnam") && (tien2=="USD")){
+		var kq=input/23000;
+		document.getElementById("show").innerHTML="số tiền là"+kq;
+		}
+	if((tien1=="America") && (tien2=="VND")){
+		var kq1=input*23000;
+		document.getElementById("show").innerHTML="số tiền là"+kq1;
+	}
+}
+</script>
