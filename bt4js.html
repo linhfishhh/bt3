@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài tập máy tính</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form>
+		<input type="number"  id="1">
+		<input type="number"  id="2"><br>
+
+	</form>
+				<input type="submit" value="Cộng" onclick="myFunc1()">
+				<input type="submit" value="trừ" onclick="myFunc2()">
+				<input type="submit" value="nhân" onclick="myFunc3()">
+				<input type="submit" value="chia" onclick="myFunc4()">
+	<h1 id="kq"></h1	>
+	<script type="text/javascript">
+		function myFunc1(){	
+				var tong=parseInt(document.getElementById("1").value)+parseInt(document.getElementById("2").value);
+			document.getElementById("kq").innerHTML="kết quả:"+tong;
+		}
+		function myFunc2(){	
+				var hieu=parseInt(document.getElementById("1").value)-parseInt(document.getElementById("2").value);
+			document.getElementById("kq").innerHTML="kết quả:"+hieu;
+		}
+		function myFunc3(){	
+				var tich=parseInt(document.getElementById("1").value)*parseInt(document.getElementById("2").value);
+			document.getElementById("kq").innerHTML="kết quả:"+tich;
+		}
+		function myFunc4(){	
+				var thuong=parseInt(document.getElementById("1").value)/parseInt(document.getElementById("2").value);
+			document.getElementById("kq").innerHTML="kết quả:"+thuong;
+		}
+	</script>
+</body>
+</html>
