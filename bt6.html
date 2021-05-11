@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chương trình tính năm nhuận</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="number" name="date" id="1">
+	<input type="submit" name="submit" onclick="myfunc()">
+	<script>
+		function	myfunc(){
+			var input=parseInt(document.getElementById("1").value);
+			if (input%4==0){
+				if(input%100==0){
+					if(input%400==0){
+						alert("day la nam nhuan");
+					}else{
+						alert("đây không phai nam nhuan")
+					}
+				}else
+					alert("day la nam nhuan");
+			}else{
+				alert("đây không phải năm nhuận");
+			}
+		}
+	</script>
+</body>
+</html>
