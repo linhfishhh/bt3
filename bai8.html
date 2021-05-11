@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>check passwd</title>
+	<meta charset="utf-8">
+</head>
+<body>
+		<h2 id="alert"></h2>
+		<label>user</label><br>
+		<input type="text" name="user" id="user"><br>
+		<label>passwd</label><br><input type="passwd" name="passwd" id="passwd"><br>
+		<input type="submit" name="submit" onclick="myfunc()">
+</body>
+</html>
+<script type="text/javascript">
+	function myfunc(){
+		var user=document.getElementById("user").value;
+		var pass=document.getElementById("passwd").value;
+		if((user=="") && (pass=="")){
+			document.getElementById("alert").innerHTML="Bạn chưa nhập thông tin";
+		}else if(pass==""){
+			document.getElementById("alert").innerHTML="Bạn chưa nhập passwd";
+		}else if(user==""){
+			document.getElementById("alert").innerHTML="Bạn chưa nhập TK ";
+		}else if((user=="admin") && (pass=="TheMaster")){
+			document.getElementById("alert").innerHTML="Welcome";
+		}else if(user!="admin"){
+			document.getElementById("alert").innerHTML="I don't know you";
+		}
+	}
+</script>
