@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tính chỉ số cân nặng cơ thế</title>
+	<meta charset="utf-8">
+</head>
+<body>
+		<label>nhập cân nặng</label><br>
+		<input type="number" id="1"><br>
+		<label>nhập chiều cao</label><br>
+		<input type="number" id="2"><br>
+		<input type="submit" id="sub"><br>
+	
+	<h1 id="out"></h1>
+</body>
+</html>
+<script>
+	document.getElementById("sub").addEventListener("click", myfunc);
+	function myfunc(){
+	var weight=parseFloat(document.getElementById("1").value);
+	var height=parseFloat(document.getElementById("2").value);
+	var bmi=weight / ( height * 2);
+		if (bmi < 18){
+    		document.getElementById("out").innerHTML="Underweight";
+		}
+		else if (bmi < 25.0){
+    		document.getElementById("out").innerHTML="normal";
+		}
+		else if (bmi < 30.0){
+    		document.getElementById("out").innerHTML="Overweight";
+		}
+		else
+    		document.getElementById("out").innerHTML="Obese";
+	}
+</script>
