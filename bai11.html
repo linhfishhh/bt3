@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hoc javascript</title>
+</head>
+<body>
+  <label>input1</label><br>
+  <input type="number" name="num" id="inp1"><br>
+  <label>input2</label><br>
+  <input type="number" name="num" id="inp2"><br>
+  <input type="submit" name="submit" id="sub">
+</body>
+</html>
+<script>
+	  	let inp1=parseInt(document.getElementById("inp1").value);
+		let inp2=parseInt(document.getElementById("inp2").value);
+	document.getElementById("sub").addEventListener("click", func1);
+	function	func1(){
+		
+		let out=inp1+inp2;
+		alert(out);
+	}
+</script>
