@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai tap</title>
+	<meta charset="utf-8">
+</head>
+<body>
+ 	<div><h1>bt1</h1>
+ 	<label>số a</label><br>
+ 	<input type="number" id="a"><br>
+	<label>số b</label><br>
+	<input type="number" id="b"><br>
+	<input type="button" value="kết quả" id="sub"><br>
+	<h1 id="out1"></h1></div>
+	<script>
+	document.getElementById("sub").addEventListener("click", funclick);
+	function funclick(){
+		let a=document.getElementById("a").value;
+		let b=document.getElementById("b").value;
+		if(a%b==0){
+			document.getElementById("out1").innerHTML=a+ " chia hết cho "+b;
+		}else{
+			document.getElementById("out1").innerHTML=a+ " không chia hết cho "+b;
+		}
+	}
+</script>
+	<div>
+		<span>Bài 2</span>
+		<label>nhập tuổi</label><br>
+		<input type="number" id="1"><br>
+		<input type="button" id="2" value="Kết quả"><br>
+		<h1 id="out2"></h1>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("2").addEventListener("click", func2)
+		function func2(){
+			let tuoi=document.getElementById("1").value;
+			if(tuoi>=16){
+				document.getElementById("out2").innerHTML=tuoi+" đủ tuổi học lớp 10"
+			}
+			else{
+				document.getElementById("out2").innerHTML=tuoi+" chưa tuổi học lớp 10"
+			}
+		}
+	</script>
+	<label>kiểm tra 1 số có lớn hơn 0 hay không</label><br>
+	<input type="number" id="num1"><br>
+	<input type="button" id="sub2" value="kết quả"><br>
+	<h1 id="out3"></h1>
+	<script type="text/javascript">
+		 document.getElementById("sub2").addEventListener("click", func3);
+		 function func3(){
+		 	let so=document.getElementById("num1").value;
+		 	if(so>0){
+		 		document.getElementById("out3").innerHTML=so+" là số lớn hơn 0";
+		 	}else{
+		 		document.getElementById("out3").innerHTML=so+" là số nhỏ hơn hoặc bằng 0";
+		 	}
+		 }
+	</script>
+</body>
+</html>
+
