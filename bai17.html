@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game đơn giản</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Do you love me?</h1><br>
+	<input type="button" name="but1" value="yes" onclick="func1()">
+	<input type="button" id="1" name="but2" value="no" onmouseover="func2()" style="position:absolute; left:60px; top:99px";>
+</body>
+</html>
+<script type="text/javascript">
+	function func1(){
+		alert("I love you too <3")
+	}
+	function func2(){
+		 var x = Math.round(Math.random() * window.innerWidth);
+		 var y = Math.round(Math.random() * window.innerHeight);
+		 document.getElementById("1").style.left= x+"px";
+		 debugger;document.getElementById("1").style.top= y+"px";
+	}
+</script>
