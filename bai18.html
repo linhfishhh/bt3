@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>baitap</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form>
+		<input type="checkbox" name="" onclick="func1(1)" id="1"><br>
+		<label>Good</label><br>
+		<input type="checkbox" name="" onclick="func1(2)" id="2"><br>
+		<label>sleep</label><br>
+		<input type="checkbox" name="" onclick="func1(3)" id="3"><br>
+		<label>eat</label><br>
+		<h1 id="4"></h1>
+	</form>
+</body>
+</html>
+<script>debugger
+	function func1(so){
+
+		let v1=document.getElementById("1").checked;
+		let v2=document.getElementById("2").checked;
+		let v3=document.getElementById("3").checked;
+		if((v1==true) && (v2==true) && (v3==true)){
+			if(so==1){
+				document.getElementById("3").checked=false;
+			}
+			if(so==2){
+				document.getElementById("1").checked=false
+			}
+			if(so==3){
+				document.getElementById("2").checked=false;
+			}
+		}
+		
+	}
+	
+	
+
+</script>
