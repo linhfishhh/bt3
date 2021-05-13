@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chuyển đổi độ C xang độ F</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="number" id="num1">
+	<select id="select1">
+		<option value="1">Độ C</option>
+		<option value="2">Độ F</option>
+	</select>
+	<select id="select2">
+		<option value="1">Độ C</option>
+		<option value="2">Độ F</option>
+	</select>
+	<input type="button" id="submit" value="kết quả"><br>
+	<h1 id="ketqua"></h1>
+	<script type="text/javascript">
+	
+		document.getElementById("submit").addEventListener("click", myfunc1)
+		function	myfunc1(){
+			var num1=parseFloat(document.getElementById("num1").value);
+			let a=document.getElementById("select1").value;
+			let b=document.getElementById("select2").value;
+			if(a==b){
+				return document.getElementById("ketqua").innerHTML=num1;
+			}
+			else if(a==1 && b==2){
+				return document.getElementById("ketqua").innerHTML=num1*(9/5)+32;
+			}
+			else {
+				return document.getElementById("ketqua").innerHTML=Math.round((num1-32)/(9/5));
+			}
+		}
+	</script>
+</body>
+</html>
