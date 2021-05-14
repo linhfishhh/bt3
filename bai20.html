@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<input type="number" id="num1">
+	<input type="number" value="" id="num1">
 	<select id="select1">
 		<option value="1">Độ C</option>
 		<option value="2">Độ F</option>
@@ -20,7 +20,12 @@
 	
 		document.getElementById("submit").addEventListener("click", myfunc1)
 		function	myfunc1(){
-			var num1=parseFloat(document.getElementById("num1").value);
+			var num1=document.getElementById("num1").value;
+
+			if(num1==""){
+				return document.getElementById("ketqua").innerHTML="bạn chưa nhập số";
+			}
+			num1=parseFloat(num1);
 			let a=document.getElementById("select1").value;
 			let b=document.getElementById("select2").value;
 			if(a==b){
@@ -32,6 +37,7 @@
 			else {
 				return document.getElementById("ketqua").innerHTML=Math.round((num1-32)/(9/5));
 			}
+			
 		}
 	</script>
 </body>
