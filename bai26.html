@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài tập</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		//bài 1
+		for(var i=1;i<=100;i++){
+			if(i==99){
+				document.write(i);
+			}
+		}
+	</script><br>
+	<script type="text/javascript">
+		// bài 2
+		do{
+			var int=parseInt(prompt("nhập số: "));
+			if(int>100){
+				document.write("giảm nhiệt độ");
+				break;
+			}else if(int<20){
+				document.write("tăng nhiệt độ");
+				break;
+			}else{
+				document.write("nhiệt độ là: "+int);
+				break;
+			}
+		}while(true)
+	</script>
+	<script type="text/javascript">
+		var a=1;
+		var b=0;
+		var temp;
+		for(var i=0;i<20;i++){
+			temp=a;
+			a=a+b;
+			b=temp;
+			document.write(b+" ");
+		}
+
+	</script><br>
+	<script type="text/javascript">
+		var a=1;
+		var b=0;
+		var temp;
+		var sum=0;
+		for(var i=0;i<20;i++){
+			temp=a;
+			a=a+b;
+			b=temp;
+			sum+=b;
+		}
+		document.write(sum);
+	</script>
+	<script>
+		// tổng tổng 30 số tự nhiên chia hết cho 7
+		var sum=0;
+		var dem=0;
+		var n=0;
+		while(dem<30){
+			if(n%7==0){
+				sum=sum+n;
+				dem++;
+			}
+			n++;
+			
+		}
+		document.write(sum);
+	</script>
+</body>
+</html>
