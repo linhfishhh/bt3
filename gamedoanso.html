@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game đoán số</title>
+	<meta charset="utf-8">
+</head>
+<body>
+ 	<input type="button" id="sub" value="Đoán">
+ 	<script type="text/javascript">
+ 		document.getElementById("sub").addEventListener("click", func1)
+ 		function func1(){debugger
+ 			var a=parseInt(prompt("Từ: "));
+ 			var b=parseInt(prompt("Đến: "));
+ 			var rand=Math.round(Math.floor(Math.random()*b)+a);
+ 			var c=parseInt(prompt("Số bạn đoán: "));
+ 			for(let i=a;i<=b;i++){
+ 				if(c==rand){
+ 					alert("Chúc mừng bạn!");
+ 					break;
+ 				}
+ 				else if(c<rand){
+ 					alert("Bé hơn");
+ 					c=parseInt(prompt("nhập lại"));
+ 				}
+ 				else if(c>rand){
+ 					alert("Lớn hơn");
+ 					c=parseInt(prompt("nhập lại"));
+ 			}
+ 		}
+ 	}
+ 	</script>
+</body>
+</html>
