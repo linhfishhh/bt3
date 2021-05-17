@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vẽ hình</title>
+</head>
+<body>
+	<h1>bài 1</h1>
+	<script type="text/javascript">
+	for(var i=1;i<=5;i++){
+		document.write("<br>");
+		for(var j=1;j<=5;j++){
+			for(var k=0;k<=i-j;k++)
+				document.write("*");
+		}
+	}
+	</script>
+	<h1>bài 2</h1>
+	<script type="text/javascript">
+	for(var i=1;i<=5;i++){
+		document.write("<br>");
+		for(var j=1;j<=5;j++){
+			for(var k=0;k<=i-j;k++)
+				document.write("*");
+		}
+	}
+	document.write("<br>")
+	for(var i=1;i<=5;i++){
+		document.write("<br>");
+		for(var j=1;j<=5;j++){
+			for(var k=0;k<=j-i;k++)
+				document.write("*");
+		}
+	}
+	</script>
+	<h1>Bài 3</h1>
+	<script type="text/javascript">
+	for(let i=1;i<=5;i++){
+		document.write("<br>");
+		for(let j=1;j<=25;j++){
+				if(i==1 || i==5) {
+					document.write("*");
+		}
+		else if(j==1 || j==25){
+			document.write("*");
+		}
+		else if(j>1 || j<25){
+			document.write("&nbsp&nbsp");
+		}			
+	}
+}
+	</script>
+	
+</body>
+</html>
