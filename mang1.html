@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mảng</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<label>Sample Screen:</label><br>
+	<input type="text" id="in1">
+	<input type="button" id="add" value="add">
+	<input type="button" id="display" value="display">
+	<div id="resp"></div>
+</body>
+</html>
+<script type="text/javascript">
+	let x=0;
+	let arr=[];
+	document.getElementById("add").addEventListener("click", func_add_array);
+	document.getElementById("display").addEventListener("click", display_array);
+	function func_add_array(){
+		arr[x]=document.getElementById("in1").value;
+		alert("phần tử thứ "+x+" của mảng bạn vừa nhập là: "+arr[x]);
+		x++;
+		document.getElementById("in1").value="";
+	}
+	function display_array(){
+		let e="<hr>";
+		for(let i=0;i<arr.length;i++){
+			e+="Element " + i + " = " + arr[i] + "<br/>"
+		}
+		 document.getElementById("resp").innerHTML = e;
+	}
+</script>
