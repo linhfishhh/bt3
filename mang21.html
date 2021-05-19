@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>khai báo mảng, sử dụng các hàm có sẵn để thao tác với mảng</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var arr1=["Red", "Green", "White", "Black"];
+		console.log(arr1.toString());
+		console.log(arr1.join(" "));
+		console.log(arr1.join('+'));
+	</script>
+	<script type="text/javascript">
+		const num=prompt("nhập số: ");
+		const str=num.toString();
+		const res=[str[0]];
+		for(let i=1;i<str.length;i++){
+			if((str[i-1]%2==0) && (str[i]%2==0)){
+				res.push('-', str[i])
+			}
+			else {
+				res.push(str[i]);
+			}
+		}
+		console.log(res.join(""));
+	</script>
+</body>
+</html>
