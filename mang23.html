@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tìm kiếm</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" name="tìm kiếm" id="int1"><br>
+	<input type="button" name="sub" value="tìm kiếm" onclick="func1()">
+	<div id="out"></div>
+</body>
+</html>
+<script type="text/javascript">
+	const arr1=["english","vietnamese","love","lmao","dark","bruh"];
+	const arr2=["tieng anh","nguoi vietnam","tinh yeu","lmao","dak","bru"];
+	function func1(){
+	var a=document.getElementById("int1").value;
+	for(let i=0;i<arr1.length;i++){
+		if(a==arr1[i]){
+			document.getElementById("out").innerHTML=arr2[i];
+			break;
+			}
+		else if(a==arr2[i]){
+				document.getElementById("out").innerHTML=arr1[i];
+				break;
+			}
+		else{
+			document.getElementById("out").innerHTML="không có từ này";
+		}
+	}
+}
+
+</script>
