@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chương trình và hiển thị  xem có bao nhiêu số nguyên lớn hơn 10</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var arr=new Array();
+		for(let i=0;i<10;i++){
+			arr[i]=+prompt("nhập phần sử ");
+		}
+		var sum=0;
+		for(let i=0;i<arr.length;i++){
+			if(arr[i]>10){
+				sum+=1;
+			}
+		}
+		document.write("có "+sum+" số lớn hơn 10");
+		var max=arr[0];
+		for (let i=1;i<10;i++){
+			if(max<arr[i]){
+				max=arr[i];
+			}
+		}
+		var vitri;
+		for(let i=0;i<10;i++){
+			if(max==arr[i]){
+				vitri=i;
+			}
+		}
+		document.write(" số lớn nhất là: "+max+" nằm ở: "+vitri);
+	</script>
+
+</body>
+</html>
