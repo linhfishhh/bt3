@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài tập mảng</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		let arr=[1,5,3,5,6,9,10,24,425,7];
+		let max=arr[0];
+		for(let i=1;i<arr.length;i++){
+			if(max<arr[i]){
+				max=arr[i];
+			}
+		}
+		let tb=0;
+		for (let i=0;i<arr.length;i++){
+			tb=tb+arr[i];
+		}
+		tb=tb/(arr.length);
+		document.write("số lớn nhất là: "+max+" tb của dãy số là: "+tb);
+	</script>
+	<script type="text/javascript">
+		var arr1=new Array();
+		for(let i=0;i<10;i++){
+			arr1[i]=+prompt("nhập số:")
+		}
+			document.write("dãy bạn vừa nhập là: "+arr1);
+		var arr2=new Array();
+		for(let i=0;i<arr1.length;i++){
+			arr2[i]=arr1[arr1.length-1-i];
+		}
+		document.write(" dãy đảo ngược của nó là: "+arr2);
+	</script>
+</body>
+</html>
