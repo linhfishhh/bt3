@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kiểm tra số có phải là số nguyên tố hay không</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	function	func1(number){
+		for(let i=2;i<=number;i++){
+			if(number%i==0){
+				return document.write("Đây không phải số nguyên tố");
+			}
+			else{
+				return document.write("đây là số nguyên tố");
+			}
+		}
+	}
+	let num=+prompt("nhập số:");
+	if(num>=10000){
+		num=+prompt("nhập lại");
+	}
+	else if(num==1){
+		document.write("đây không phải số nguyên tố");
+	}
+	func1(num);
+
+</script>
+</body>
+</html>
