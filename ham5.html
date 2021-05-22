@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chuyển đổi</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<label>Nhập số:</label>
+	<input type="number" id="input1">
+	<select id="select1">
+		<option value="1">Feet</option>
+		<option value="2">Meters</option>
+	</select>
+	=>
+	<select id="select2">
+		<option value="1">Feet</option>
+		<option value="2">Meters</option>
+	</select>
+	=>
+	<input type="button" value="Chuyển đổi" onclick="func3()"><br>
+	<div id="out"></div>
+</body>
+</html>
+<script type="text/javascript">
+	function func1(foot){
+		 meter = 0.305 * foot;
+		 return meter;
+	}
+	function func2(meter){
+		foot = 3.279 * meter;
+		return foot;
+	}
+	function func3(){
+		var param=document.getElementById("input1").value;
+		var param2=document.getElementById("select1").value;
+		var param3=document.getElementById("select2").value;
+		if(param2==param3){
+			document.getElementById("out").innerHTML=param;
+		}else if(param2==1 && param3==2){
+			let a=func1(param);
+			document.getElementById("out").innerHTML=a;
+		}else if(param2==2 && param3==1){
+			let b=func2(param);
+			document.getElementById("out").innerHTML=b;
+		}
+	}
+</script>
