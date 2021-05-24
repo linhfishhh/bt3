@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tìm tên ngôi sao</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr1=["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+		var arr2=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+		function	func(str){
+			for(let i=0;i<arr1.length;i++){
+				if(arr1[i]==str){
+					document.write(arr2[i]);
+				}else if(arr2[i]==str){
+					document.write(arr1[i]);
+				}
+			}
+		}
+		var str=prompt("nhập vào");
+		func(str);
+	</script>
+</body>
+</html>
