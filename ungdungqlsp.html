@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ứng dụng quản lý sản phẩm</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="input">
+	<input type="button" value="ADD" id="add"><br><br><br>
+	<h1>Display All Product</h1>
+<table id="table">
+	
+</table>
+<script type="text/javascript">
+	document.getElementById("add").addEventListener("click", func1);
+	var arr=[];
+	function func1(){
+		var a=document.getElementById("input").value;
+		arr.push(a);
+		var str="";
+		for(let i=0;i<arr.length;i++){
+			str+='<tr><td id="'+i+'">'+arr[i]+'<td><td><input type="button" value="Edit" onclick="edit('+i+')"></td><td><input type="button" value="Delete" onclick="+Del('+i+')"></td></tr>';
+		}
+		document.getElementById("table").innerHTML=str;
+	}
+	function edit(i){
+		arr[i]=prompt("nhập chuõi");
+		document.getElementById(i).innerHTML=arr[i];
+	}
+	function Del(i){
+		arr.splice(i, 1);
+		var str="";
+		for(let i=0;i<arr.length;i++){
+			str+='<tr><td id="'+i+'">'+arr[i]+'<td><td><input type="button" value="Edit" onclick="edit('+i+')"></td><td><input type="button" value="Delete" onclick="+Del('+i+')"></td></tr>';
+		}
+		document.getElementById("table").innerHTML=str;
+	}
+</script>
+</body>
+</html>
