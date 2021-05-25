@@ -18,6 +18,7 @@
 		var a=document.getElementById("input").value;
 		arr.push(a);
 		var str="";
+		
 		for(let i=0;i<arr.length;i++){
 			str+='<tr><td id="'+i+'">'+arr[i]+'<td><td><input type="button" value="Edit" onclick="edit('+i+')"></td><td><input type="button" value="Delete" onclick="+Del('+i+')"></td></tr>';
 		}
