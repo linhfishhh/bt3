@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hình chữ nhật</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<script type="text/javascript">
+
+	function Rectangle(x,y,width,height){
+		this.x=x;
+		this.y=y;
+		this.width=width;
+		this.height=height;
+		this.getArea= function(){
+			return width*height;
+		}
+		this.getC=function(){
+			return ((width+height)*2);
+		}
+
+	}
+	function createRectangle(){
+		var r=new Rectangle(500,500,5,10);
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "#FF0000";
+		ctx.fillRect(r.x,r.y,r.width,r.height);
+		alert(r.getArea());
+		alert(r.getC());
+	}
+	createRectangle();
+
+</script>
+</body>
+</html>
