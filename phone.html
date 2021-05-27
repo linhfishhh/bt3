@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>phone</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script>
+	let message = "";
+	function mobile(id, name){
+		this.id=id;
+		this.name=name;
+		this.message=message;
+		this.inbox=[];
+		this.setMessage=function(message){
+			this.message=message;
+		}
+		this.getMessage=function(){
+			return this.message;
+		}
+		this.sendMessage=function(message, mobile){
+			mobile.setMessage(message);
+			mobile.inbox.push(message);
+		}
+		this.getAllInbox=function(){
+			return this.inbox;
+		}
+	}
+	function sub1(){
+		var iphone=new mobile(1, iphone);
+		var android=new mobile(2, android);
+		var data=document.getElementById("input1").value;
+		iphone.sendMessage(data, android);
+		message=android.getMessage();
+		console.log(message);
+		console.log(android.getAllInbox());
+		//document.getElementByid("1.1").innerHTML="acsd";
+	}
+
+</script>
+</body>
+</html>

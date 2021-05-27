@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phone</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div>
+		<p>Phone 1</p><br>
+		<textarea></textarea><br>
+		<textarea></textarea><br>
+		<input type="text" placeholder="Write message here...">
+		<input type="button" value="Gửi">
+	</div>
+	<hr>
+	<div>
+		<p>Phone 1</p><br>
+		<textarea></textarea><br>
+		<textarea></textarea><br>
+		<input type="text" placeholder="Write message here...">
+		<input type="button" value="Gửi">
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	function Mobile(id, name){
+		this.id=id;
+		this.name=name;
+		this.message=message;
+		this.inbox=[];
+		this.outbox=[];
+		this.setMsg=function(message){debugger
+			this.message=message;
+		}
+		this.getMsg=function(){
+			return this.message;
+		}
+		this.receiveMsg=function(message){
+			this.inbox.push(message);
+		}
+		this.sendMsg=function(mobile){
+			this.outbox.push(this.msg);
+			mobile.receiveMsg(this.msg);
+		}
+		this.getAllInbox=function(){
+			return this.inbox;
+		}
+	}
+	var iphone=new Mobile(1, iphone);
+	var android=new Mobile(2, android);debugger
+	iphone.setMsg("abcd");
+	iphone.sendMsg(android);
+	console.log(android.getMsg());
+
+</script>
