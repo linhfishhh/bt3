@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mô phỏng hoạt động của đèn pin</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<Script>
+		function Battery(){
+			this.setEnergy=function(energy){
+				this.energy=energy;
+			}
+			this.getEnergy=function(){
+				return this.energy;
+			}
+			this.decreateEngergy=function(){
+				if(this.energy>0){
+					this.energy--;
+				}
+			}
+		}
+		function FlashLamp(){
+			this.setBattery=function(battery){
+				this.battery=battery;
+			}
+			this.getBattery=function(){
+				return this.battery;
+			}
+			this.light=function(){
+				if(this.status){
+					alert("lighting");
+				}else
+				alert("not lighting");
+			}
+			this.turnOn=function(){
+				this.status=true;
+			}
+			this.turnOff=function(){
+				this.status=false;
+			}
+		}
+		let battery = new Battery();
+		battery.setEnergy(10);
+
+		let flashLamp = new FlashLamp();
+		flashLamp.setBattery(battery);
+
+		document.write("Battery info:" + flashLamp.getBattery() + "<br/>");
+		flashLamp.light();
+
+		document.write("Turn on<br/>")
+		flashLamp.turnOn();
+		flashLamp.light();
+		document.write("Battery info:" + flashLamp.getBattery() + "<br/>");
+
+		document.write("Turn off<br/>")
+		flashLamp.turnOff();
+		flashLamp.light();	
+	</Script>
+
+</body>
+</html>
